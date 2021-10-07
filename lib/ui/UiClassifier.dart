@@ -2,6 +2,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:untitledtest/data/models/Profile.dart';
 import 'package:untitledtest/ui/bar/MyAppBar.dart';
 import 'package:untitledtest/ui/container/RootComponent.dart';
 
@@ -19,8 +20,8 @@ class UiClassifier {
     return appBar.createAppBar();
   }
 
-  Container createContainer() {
-    RootComponent rootComponent = new RootComponent();
+  Container createContainer(Profile profile) {
+    RootComponent rootComponent = new RootComponent(profile);
     return rootComponent.createContainer();
   }
 }

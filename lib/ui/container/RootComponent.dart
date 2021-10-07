@@ -4,15 +4,16 @@
 
 
 import 'package:flutter/cupertino.dart';
+import 'package:untitledtest/data/models/Profile.dart';
 
 import 'StackComponent.dart';
 
 class RootComponent {
 
-    StackComponent stackComponent = new StackComponent();
+    late StackComponent stackComponent ;//= new StackComponent();
 
-    RootComponent() {
-
+    RootComponent(Profile profile) {
+        stackComponent = new StackComponent(profile);
     }
 
     Container createContainer() {
